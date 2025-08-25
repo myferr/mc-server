@@ -13,9 +13,11 @@ Minecraft servers in Docker
 
 | Version    | Supported?  |
 | ---------- | ----------- |
-| `1.21.8`   | ✅          | 
-| `1.21.7`   | ✅          | 
-| `1.21.6`   | ✅          | 
+| `1.21.8`   | ✅          |
+| `1.21.7`   | ✅          |
+| `1.21.6`   | ✅          |
+| `1.21.5`   | ✅          |
+
 
 > [!TIP]
 > When creating your Docker Compose or starting the server, replace `1.21.6` with any [supported version](https://github.com/myferr/mc-server#supported-versions) you'd like.
