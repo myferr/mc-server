@@ -1,3 +1,5 @@
+![](https://github.com/user-attachments/assets/4e6d9da8-3598-4260-be27-187963bcce9a)
+
 # 🐳 mc-server
 Minecraft servers in Docker
 
