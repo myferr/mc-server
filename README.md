@@ -52,6 +52,13 @@ docker compose up -d
 | `1.21.2` | Minecraft 1.21.2 server       |
 | `1.21.1` | Minecraft 1.21.1 server       |
 | `1.21` | Minecraft 1.21 server       |
+| `1.20.6` | Minecraft 1.20.6 server       |
+| `1.20.5` | Minecraft 1.20.5 server       |
+| `1.20.4` | Minecraft 1.20.4 server       |
+| `1.20.3` | Minecraft 1.20.3 server       |
+| `1.20.2` | Minecraft 1.20.2 server       |
+| `1.20.1` | Minecraft 1.20.1 server       |
+| `1.20` | Minecraft 1.20 server       |
 
 ## License
 

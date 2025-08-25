@@ -14,7 +14,7 @@ fi
 echo "$CR_PAT" | docker login ghcr.io -u "$GITHUB_USER" --password-stdin
 
 # Versions in chronological order
-VERSIONS=("1.21" "1.21.1" "1.21.2" "1.21.3" "1.21.4" "1.21.5" "1.21.6" "1.21.7" "1.21.8")
+VERSIONS=("1.20" "1.20.1" "1.20.2" "1.20.3" "1.20.4" "1.20.5" "1.20.6" "1.21" "1.21.1" "1.21.2" "1.21.3" "1.21.4" "1.21.5" "1.21.6" "1.21.7" "1.21.8")
 
 IMAGE_NAME="ghcr.io/$GITHUB_USER/mc-server"
 
