@@ -21,6 +21,7 @@ Minecraft servers in Docker
 | `1.21.3`   | ✅          |
 | `1.21.2`   | ✅          |
 | `1.21.1`   | ✅          |
+| `1.21`     | ✅          |
 
 ```yaml
 services:
@@ -50,6 +51,7 @@ docker compose up -d
 | `1.21.3` | Minecraft 1.21.3 server       |
 | `1.21.2` | Minecraft 1.21.2 server       |
 | `1.21.1` | Minecraft 1.21.1 server       |
+| `1.21` | Minecraft 1.21 server       |
 
 ## License
 
