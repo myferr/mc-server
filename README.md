@@ -31,6 +31,11 @@ Minecraft servers in Docker
 | `1.20.2`   | ✅          |
 | `1.20.1`   | ✅          |
 | `1.20`     | ✅          |
+| `1.19.4`   | ✅          |
+| `1.19.3`   | ✅          |
+| `1.19.2`   | ✅          |
+| `1.19.1`   | ✅          |
+| `1.19`     | ✅          |
 
 > [!TIP]
 > When creating your Docker Compose or starting the server, replace `1.21.6` with any [supported version](https://github.com/myferr/mc-server#supported-versions) you'd like.
@@ -80,6 +85,11 @@ docker compose up -d
 | `1.20.2` | Minecraft 1.20.2 server       |
 | `1.20.1` | Minecraft 1.20.1 server       |
 | `1.20` | Minecraft 1.20 server       |
+| `1.19.4` | Minecraft 1.19.4 server       |
+| `1.19.3` | Minecraft 1.19.3 server       |
+| `1.19.2` | Minecraft 1.19.2 server       |
+| `1.19.1` | Minecraft 1.19.1 server       |
+| `1.19` | Minecraft 1.19 server       |
 
 ## License
 
