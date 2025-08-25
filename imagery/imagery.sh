@@ -26,10 +26,16 @@ else
 fi
 
 docker tag "$2" myferr/mc-server:"$1"
-docker tag "$2" myferr/mc-server:latest
+
+if [ "$3" == "latest" ]; then
+    docker tag "$2" myferr/mc-server:latest
+fi
 
 docker push myferr/mc-server:"$1"
-docker push myferr/mc-server:latest
+
+if [ "$3" == "latest" ]; then
+    docker push myferr/mc-server:latest
+fi
 
 rm -rf "$2"
 
