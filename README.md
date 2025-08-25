@@ -18,19 +18,8 @@ Minecraft servers in Docker
 | `1.21.6`   | ✅          |
 | `1.21.5`   | ✅          |
 | `1.21.4`   | ✅          |
-
-
-> [!TIP]
-> When creating your Docker Compose or starting the server, replace `1.21.6` with any [supported version](https://github.com/myferr/mc-server#supported-versions) you'd like.
-
-## Quick Start
-
-### Pull & Run with Docker
-```bash
-docker run -d -p 25565:25565 --name mc-server myferr/mc-server:1.21.6
-```
-
-### Minimal Docker Compose
+| `1.21.3`   | ✅          |
+| `1.21.2`   | ✅          |
 
 ```yaml
 services:
@@ -57,6 +46,8 @@ docker compose up -d
 | `1.21.6` | Minecraft 1.21.6 server       |
 | `1.21.5` | Minecraft 1.21.5 server       |
 | `1.21.4` | Minecraft 1.21.4 server       |
+| `1.21.3` | Minecraft 1.21.3 server       |
+| `1.21.2` | Minecraft 1.21.2 server       |
 
 ## License
 
