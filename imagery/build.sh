@@ -2,7 +2,7 @@
 set -e
 
 # Versions in chronological order
-VERSIONS=("1.21.2" "1.21.3" "1.21.4" "1.21.5" "1.21.6" "1.21.7" "1.21.8")
+VERSIONS=("1.21.1" "1.21.2" "1.21.3" "1.21.4" "1.21.5" "1.21.6" "1.21.7" "1.21.8")
 
 LAST_INDEX=$((${#VERSIONS[@]} - 1))
 LAST_VERSION=${VERSIONS[$LAST_INDEX]}
