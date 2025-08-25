@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/myferr/mc-server#quick-start
+    about: Check the docs before opening an issue.
+  - name: Discussions
+    url: https://github.com/myferr/mc-server/discussions
+    about: For questions, ideas, or general conversation.
