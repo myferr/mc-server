@@ -23,6 +23,18 @@ Minecraft servers in Docker
 | `1.21.1`   | ✅          |
 | `1.21`     | ✅          |
 
+> [!TIP]
+> When creating your Docker Compose or starting the server, replace `1.21.6` with any [supported version](https://github.com/myferr/mc-server#supported-versions) you'd like.
+
+## Quick Start
+
+### Pull & Run with Docker
+```bash
+docker run -d -p 25565:25565 --name mc-server myferr/mc-server:1.21.6
+```
+
+### Minimal Docker Compose
+
 ```yaml
 services:
   mc-server:
