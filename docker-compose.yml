@@ -1,0 +1,6 @@
+services:
+  mc-server:
+    image: myferr/mc-server
+    container_name: mc-server
+    ports:
+      - "25565:25565"
