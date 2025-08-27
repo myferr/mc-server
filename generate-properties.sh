@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "eula=true" > eula.txt
+
 cat > server.properties <<EOF
 hardcore=${HARDCORE:-false}
 gamemode=${GAMEMODE:-survival}
