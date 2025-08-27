@@ -4,6 +4,12 @@ WORKDIR /server
 
 # Download Minecraft server jar dynamically
 ARG VERSION
+
+# Install curl and jq
+RUN apt-get update && \
+    apt-get install -y curl jq && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN curl -s https://launchermeta.mojang.com/mc/game/version_manifest.json \
     | jq -r --arg v "$VERSION" '.versions[] | select(.id==$v) | .url' \
     | xargs curl -s \
