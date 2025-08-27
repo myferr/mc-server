@@ -1,6 +1,13 @@
 services:
   mc-server:
-    image: myferr/mc-server
-    container_name: mc-server
+    image: myferr/mc-server:latest
     ports:
       - "25565:25565"
+    environment:
+      HARDCORE: "false"
+      GAMEMODE: "survival"
+      CHEATS: "false"
+      MAXPLAYERS: "20"
+      MOTD: "Welcome to my compose server!"
+    volumes:
+      - ./data:/server
