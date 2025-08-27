@@ -45,6 +45,22 @@ Minecraft servers in Docker
 | `1.16.2`   | ✅          |
 | `1.16.1`   | ✅          |
 | `1.16`     | ✅          |
+| `1.15.2`   | ✅          |
+| `1.15.1`   | ✅          |
+| `1.15`     | ✅          |
+| `1.14.4`   | ✅          |
+| `1.14.3`   | ✅          |
+| `1.14.2`   | ✅          |
+| `1.14.1`   | ✅          |
+| `1.14`     | ✅          |
+| `1.13.2`   | ✅          |
+| `1.13.1`   | ✅          |
+| `1.13`     | ✅          |
+| `1.12.2`   | ✅          |
+| `1.12.1`   | ✅          |
+| `1.12`     | ✅          |
+| `1.17.1`   | ✅          |
+| `1.17`     | ✅          |
 
 > [!TIP]
 > When creating your Docker Compose or starting the server, replace `1.21.6` with any [supported version](https://github.com/myferr/mc-server#supported-versions) you'd like.
@@ -108,6 +124,22 @@ docker compose up -d
 | `1.16.2` | Minecraft 1.16.2 server       |
 | `1.16.1` | Minecraft 1.16.1 server       |
 | `1.16` | Minecraft 1.16 server       |
+| `1.15.2` | Minecraft 1.15.2 server       |
+| `1.15.1` | Minecraft 1.15.1 server       |
+| `1.15` | Minecraft 1.15 server       |
+| `1.14.4` | Minecraft 1.14.4 server       |
+| `1.14.3` | Minecraft 1.14.3 server       |
+| `1.14.2` | Minecraft 1.14.2 server       |
+| `1.14.1` | Minecraft 1.14.1 server       |
+| `1.14` | Minecraft 1.14 server       |
+| `1.13.2` | Minecraft 1.13.2 server       |
+| `1.13.1` | Minecraft 1.13.1 server       |
+| `1.13` | Minecraft 1.13 server       |
+| `1.12.2` | Minecraft 1.12.2 server       |
+| `1.12.1` | Minecraft 1.12.1 server       |
+| `1.12` | Minecraft 1.12 server       |
+| `1.17.1` | Minecraft 1.17.1 server       |
+| `1.17` | Minecraft 1.17 server       |
 
 ## License
 
