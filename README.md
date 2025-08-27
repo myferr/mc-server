@@ -11,6 +11,33 @@ Minecraft servers in Docker
 - Minimal Docker Compose setup
 - Quick startup and ready-to-play
 
+> [!TIP]
+> When creating your Docker Compose or starting the server, use a support version as the `image` tag. Like `myferr/mc-server:1.21.6`, `myferr/mc-server:1.20.6`, `myferr/mc-server:1.19.4`, etc.
+
+## Quick Start
+
+### Pull & Run with Docker
+```bash
+docker run -d -p 25565:25565 --name mc-server myferr/mc-server:1.21.6
+```
+
+### Minimal Docker Compose
+
+```yaml
+services:
+  mc-server:
+    image: myferr/mc-server:1.21.6
+    container_name: mc-server
+    ports:
+      - "25565:25565"
+```
+
+Start the server:
+
+```bash
+docker compose up -d
+```
+
 ## Supported Versions
 
 | Version    | Supported?  |
@@ -61,33 +88,6 @@ Minecraft servers in Docker
 | `1.12`     | ✅          |
 | `1.17.1`   | ✅          |
 | `1.17`     | ✅          |
-
-> [!TIP]
-> When creating your Docker Compose or starting the server, use a support version as the `image` tag. Like `myferr/mc-server:1.21.6`, `myferr/mc-server:1.20.6`, `myferr/mc-server:1.19.4`, etc.
-
-## Quick Start
-
-### Pull & Run with Docker
-```bash
-docker run -d -p 25565:25565 --name mc-server myferr/mc-server:1.21.6
-```
-
-### Minimal Docker Compose
-
-```yaml
-services:
-  mc-server:
-    image: myferr/mc-server:1.21.6
-    container_name: mc-server
-    ports:
-      - "25565:25565"
-```
-
-Start the server:
-
-```bash
-docker compose up -d
-```
 
 ## License
 
