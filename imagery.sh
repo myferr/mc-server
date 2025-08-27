@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+MIN_MAJOR=1
+MIN_MINOR=8
+
 # If no versions provided, fetch all
 if [ -z "$1" ]; then
   echo "[imagery:info] No versions specified. Fetching all releases..."
@@ -10,16 +13,26 @@ else
   VERSIONS="$@"
 fi
 
+# Filter out versions <1.8
+FILTERED_VERSIONS=""
 for v in $VERSIONS; do
+  MAJOR=$(echo "$v" | cut -d. -f1)
+  MINOR=$(echo "$v" | cut -d. -f2)
+  if [ "$MAJOR" -gt $MIN_MAJOR ] || { [ "$MAJOR" -eq $MIN_MAJOR ] && [ "$MINOR" -ge $MIN_MINOR ]; }; then
+    FILTERED_VERSIONS="$FILTERED_VERSIONS $v"
+  fi
+done
+
+for v in $FILTERED_VERSIONS; do
   echo "[imagery:build] Building $v..."
   docker build --build-arg VERSION="$v" -t myferr/mc-server:"$v" .
   docker push myferr/mc-server:"$v"
 done
 
 # Tag latest as the newest built version
-LATEST=$(echo "$VERSIONS" | tail -n1)
+LATEST=$(echo "$FILTERED_VERSIONS" | awk '{print $NF}')
 docker tag myferr/mc-server:"$LATEST" myferr/mc-server:latest
 docker push myferr/mc-server:latest
 
 echo "[imagery:done] Built and pushed images for versions:"
-echo "$VERSIONS"
+echo "$FILTERED_VERSIONS"
