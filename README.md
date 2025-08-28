@@ -64,7 +64,7 @@ To apply a server icon in your Docker Compose add the following lines:
 ```
 
 Full example:
-```
+```yaml
 services:
   mc-server:
     image: myferr/mc-server
