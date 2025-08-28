@@ -51,6 +51,31 @@ You can configure the Minecraft server through environment variables in either `
 | `GAMEMODE`   | `survival`, `creative`, `adventure`, `spectator` | `survival`             | Sets the default gamemode for new players.                             |
 | `HARDCORE`   | `true`, `false`                                  | `false`                | Enables or disables hardcore mode.                                     |
 
+### Server icons
+A Minecraft server icon is a visual representation of the game's logo or a custom design that can be used to identify the server in the server list, to apply the logo to the server just by placing it in the [`server-icon.png`](https://github.com/user-attachments/assets/7c7f73fd-46ef-406a-852f-aa35201bac29) file in the server directory. Make sure it's a `.png` and a `64x64` pixel size.
+
+![](https://github.com/user-attachments/assets/4c9a9830-d5a9-4024-bebd-8fa94b59764e)
+
+To apply a server icon in your Docker Compose add the following lines:
+
+```yaml
+    volumes:
+      - ~/desktop/server-icon.png:/server/server-icon.png
+```
+
+Full example:
+```
+services:
+  mc-server:
+    image: myferr/mc-server
+    container_name: mc-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - ~/desktop/server-icon.png:/server/server-icon.png
+```
+
+
 ### Docker Run
 
 ```bash
