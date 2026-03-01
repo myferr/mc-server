@@ -4,6 +4,7 @@ services:
     ports:
       - "25565:25565"
     environment:
+      VERSION: "1.21"
       HARDCORE: "false"
       GAMEMODE: "survival"
       CHEATS: "false"
@@ -11,3 +12,19 @@ services:
       MOTD: "Welcome to my compose server!"
     volumes:
       - ./data:/server
+
+  # Example: PaperMC server with plugins
+  # mc-server-paper:
+  #   image: myferr/mc-server:paper-1.21
+  #   ports:
+  #     - "25566:25565"
+  #   environment:
+  #     VERSION: "paper-1.21"
+  #     HARDCORE: "false"
+  #     GAMEMODE: "survival"
+  #     CHEATS: "false"
+  #     MAXPLAYERS: "20"
+  #     MOTD: "PaperMC Server"
+  #     PLUGINS_URL: "https://cdn.papermc.io/paper-plugins/example/1.0.0/plugin.jar"
+  #   volumes:
+  #     - ./data-paper:/server
