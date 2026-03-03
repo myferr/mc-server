@@ -76,7 +76,13 @@ if [ ! -f "/server/server.jar" ]; then
         fi
     fi
     
-    echo "eula=true" > /server/eula.txt
+    if [ -n "$EULA" ] && [ "$EULA" = "TRUE" ]; then
+        echo "eula=true" > /server/eula.txt
+        print_status "EULA automatically accepted via EULA=TRUE environment variable"
+    else
+        print_warning "EULA not automatically accepted. Please manually accept the EULA by setting EULA=TRUE or editing eula.txt"
+        print_warning "For more information, see: https://www.minecraft.net/en-us/eula"
+    fi
 else
     print_status "Server JAR already exists, skipping download"
 fi
