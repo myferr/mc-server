@@ -20,8 +20,10 @@ Minecraft servers in Docker
 ### Pull & Run with Docker
 
 ```bash
-docker run -d -p 25565:25565 --name mc-server myferr/mc-server:1.21.6
+docker run -d -p 25565:25565 -e EULA=TRUE --name mc-server myferr/mc-server:1.21.6
 ```
+
+> Set `EULA` to `TRUE` to agree to [Minecraft's EULA](https://www.minecraft.net/en-us/eula). Required for running the server.
 
 ### Minimal Docker Compose
 
