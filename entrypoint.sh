@@ -21,7 +21,7 @@ print_error() {
 if [ ! -f "/server/server.jar" ]; then
     print_status "Server JAR not found, downloading..."
     
-    VERSION=$(echo "$0" | grep -oE "(paper-[0-9]+\.[0-9]+\.[0-9]+|[0-9]+\.[0-9]+\.[0-9]+)$" | head -n1 || echo "latest")
+    VERSION=${MC_VERSION:-latest}
     
     if [ -z "$VERSION" ] || [ "$VERSION" = "latest" ]; then
         VERSION="latest"

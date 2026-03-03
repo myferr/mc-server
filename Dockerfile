@@ -1,5 +1,7 @@
 FROM eclipse-temurin:21-jre AS runtime
 
+ARG VERSION
+
 WORKDIR /server
 
 # Install dependencies
@@ -19,6 +21,9 @@ EXPOSE 25565
 # Copy properties generation script
 COPY generate-properties.sh /usr/local/bin/generate-properties.sh
 RUN chmod +x /usr/local/bin/generate-properties.sh
+
+# Set environment variable for version
+ENV MC_VERSION=${VERSION:-latest}
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["java", "-Xmx2G", "-Xms2G", "-jar", "server.jar", "nogui"]
