@@ -13,13 +13,13 @@ RUN apt-get update && \
 RUN mkdir -p /server/plugins
 
 # Copy entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 25565
 
 # Copy properties generation script
-COPY generate-properties.sh /usr/local/bin/generate-properties.sh
+COPY scripts/generate-properties.sh /usr/local/bin/generate-properties.sh
 RUN chmod +x /usr/local/bin/generate-properties.sh
 
 # Set environment variable for version
